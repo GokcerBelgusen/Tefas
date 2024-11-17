@@ -46,4 +46,4 @@ def calculate_sharpe_ratio(fund_code, start_date, end_date, risk_free_rate=0.03)
     return sharpe_ratio
 
 # Example usage
-sharpe_ratio = calculate_sharpe_ratio("AAK", "2024-01-01", "2024-11-15")
+sharpe_ratio = calculate_sharpe_ratio("RPD", "2024-01-01", "2024-11-15")
