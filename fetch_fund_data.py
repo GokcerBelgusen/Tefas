@@ -241,7 +241,7 @@ def process_in_parallel(funds, num_threads=5):
 
 
 # Call the function to process funds in parallel
-process_in_parallel(funds, num_threads=5)
+process_in_parallel(funds, num_threads=50)
 
 
 
