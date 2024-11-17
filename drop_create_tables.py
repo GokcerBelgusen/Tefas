@@ -1,7 +1,9 @@
 import sqlite3
 
 # Define the database connection (replace with your database file path)
-db_file = 'your_database.db'
+# SQLite database setup
+db_path = "/Users/gokcerbelgusen/IdeaProjects/Sample Database/identifier.sqlite"
+
 
 # SQL queries to drop and create tables
 sql_queries = [
@@ -53,7 +55,7 @@ sql_queries = [
 ]
 
 # Connect to the SQLite database
-conn = sqlite3.connect(db_file)
+conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 
 # Execute each SQL query to drop and create the tables

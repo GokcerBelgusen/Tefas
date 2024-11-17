@@ -106,8 +106,17 @@ def process(fund):
             
         result = []
 
-        # Fetch data from TEFAS
-        result = tefas.fetch(fund, start, end)
+        # Fetch data from TEFAS     
+        try:
+          result = tefas.fetch(fund, start, end)
+          if result is None:
+             print(f"Fetch returned None for Fund: {fund}, Start: {start}, End: {end}")
+             return  # Stop further processing for this fund
+        
+        except Exception as e:
+          print(f"An error occurred while fetching data for Fund: {fund}, Start: {start}, End: {end}")
+          print(f"Error: {e}")
+          return  # You can decide how to handle the result in case of an exception
 
         # Check the structure of the result
         # print(result)
@@ -117,10 +126,10 @@ def process(fund):
             fund_data = result[fund]
             
             # Print the attributes of the Fund object to understand its structure
-            print(fund_data.__dict__)  # This will show the object's attributes
+            # print(fund_data.__dict__)  # This will show the object's attributes
 
             # Now safely access the 'code' attribute
-            print(fund_data.code)  # Assuming 'code' is an attribute of the Fund object
+            # print(fund_data.code)  # Assuming 'code' is an attribute of the Fund object
 
             # SQLite database operations
             try:
