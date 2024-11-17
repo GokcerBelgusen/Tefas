@@ -43,7 +43,7 @@ plt.figure(figsize=(10, 6))
 plt.plot(df_fund_1['Date'], df_fund_1['Price'], marker='o', linestyle='-', label=f'Fund {fund_code_1}', color='b')
 
 # Plot Fund 2's price data
-plt.plot(df_fund_2['Date'], df_fund_2['Price'], marker='x', linestyle='-', label=f'Fund {fund_code_2}', color='r')
+plt.plot(df_fund_2['Date'], df_fund_2['Price'], marker='o', linestyle='-', label=f'Fund {fund_code_2}', color='r')
 
 # Add labels and title
 plt.title(f'Price Comparison Over Time for Funds {fund_code_1} and {fund_code_2}')

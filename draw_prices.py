@@ -29,7 +29,7 @@ plt.figure(figsize=(10, 6))
 plt.plot(df['Date'], df['Price'], marker='.', linestyle='-', color='b')
 
 # Add labels and title
-plt.title(f'Price Over Time for Fund {fund_code}')
+plt.title(f'Price Over Time for Fußnd {fund_code}')
 plt.xlabel('Date')
 plt.ylabel('Price')
 plt.grid(True)
