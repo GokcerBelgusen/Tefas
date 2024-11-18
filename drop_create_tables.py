@@ -10,6 +10,18 @@ sql_queries = [
     "DROP TABLE IF EXISTS Fund_Assets;",
     "DROP TABLE IF EXISTS Fund_History;",
     "DROP TABLE IF EXISTS Fund_Details;",
+    "DROP TABLE IF EXISTS Linearity_Analysis;",
+
+
+    """
+    CREATE TABLE Linearity_Analysis (
+    Fund_Code TEXT NOT NULL,
+    Slope REAL NOT NULL,
+    Intercept REAL NOT NULL,
+    R_Squared REAL NOT NULL,
+    Analysis_Date TEXT NOT NULL,
+    PRIMARY KEY (Fund_Code, Analysis_Date));
+    """,
     
     """
     CREATE TABLE Fund_Details (
